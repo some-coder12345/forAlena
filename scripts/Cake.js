@@ -1,3 +1,6 @@
+import CodeBlock from "./CodeBlock.js";
+
+
 const rootClass = '[data-js-cake]';
 
 class Cake {
@@ -30,10 +33,12 @@ class Cake {
             set: (target, prop, newProp) => {
                 if (newProp <= 0) {
                     this.setCongrats();
+                    new CodeBlock();
+                    // setTimeout(() => {
+                    // }, 1000)
                     return true;
                 }
                 target[prop] = newProp;
-                console.log(newProp);
                 return true;
             },
         });
@@ -59,4 +64,4 @@ class Cake {
     }
 }
 
-new Cake();
+export default Cake;

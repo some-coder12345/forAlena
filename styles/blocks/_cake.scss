@@ -1,6 +1,5 @@
-@use '../helpers/functions' as *;
+@use '../helpers/index' as *;
 @use '../variables';
-
 
 .cake {
     width: 100%;
@@ -13,6 +12,10 @@
     padding-block: 1rem;
     background: radial-gradient(circle at top, #2f1164, #17205f);
 
+    @include mobile {
+        row-gap: 4rem;
+    }
+
     &.all-blowed {
         background: radial-gradient(circle at top, #561eb6, #2b3bb0);
     }
@@ -22,6 +25,10 @@
         grid-template-rows: repeat(4, 1fr);
         width: 60%;
         height: 100%;
+
+        @include mobile {
+            width: 90%;
+        }
 
         &-candles {
             display: flex;

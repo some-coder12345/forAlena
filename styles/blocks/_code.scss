@@ -1,4 +1,4 @@
-@use '../helpers/functions' as *;
+@use '../helpers/index' as *;
 
 
 .code {
@@ -7,9 +7,26 @@
     padding-block: rem(20);
     font-size: 1rem;
     border-radius: 5px;
+    box-sizing: border-box;
+
+    @include tablet {
+        font-size: .8rem;
+    }
+
+    @include mobile {
+        font-size: .6rem;
+    }
+
+    @include mobile-s {
+        font-size: .35rem;
+    }
 
     &__content {
         line-height: 40px;
+
+        @include mobile {
+            line-height: 10px;
+        }
     }
 
     &__launch {
@@ -19,6 +36,24 @@
         color: white;
         border-radius: 3px;
         padding: 10px;
+        margin-top: 10px;
 
+        @include mobile {
+            font-size: .5rem;
+            padding: 5px;
+        }
+
+    }
+
+    &__result {
+        border-top: 2px solid black;
+        padding-top: rem(20);
+        margin-top: rem(20);
+        color: rgb(0, 154, 0);
+        font-size: .55rem;
+
+        &.is-hidden {
+            display: none;
+        }
     }
 }

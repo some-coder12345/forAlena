@@ -227,6 +227,11 @@ main {
   padding-block: 1rem;
   background: radial-gradient(circle at top, #2f1164, #17205f);
 }
+@media (width <= 47.99875rem) {
+  .cake {
+    row-gap: 4rem;
+  }
+}
 .cake.all-blowed {
   background: radial-gradient(circle at top, #561eb6, #2b3bb0);
 }
@@ -235,6 +240,11 @@ main {
   grid-template-rows: repeat(4, 1fr);
   width: 60%;
   height: 100%;
+}
+@media (width <= 47.99875rem) {
+  .cake__inner {
+    width: 90%;
+  }
 }
 .cake__inner-candles {
   display: flex;
@@ -295,9 +305,30 @@ main {
   padding-block: 1.25rem;
   font-size: 1rem;
   border-radius: 5px;
+  box-sizing: border-box;
+}
+@media (width <= 63.99875rem) {
+  .code {
+    font-size: 0.8rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .code {
+    font-size: 0.6rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .code {
+    font-size: 0.35rem;
+  }
 }
 .code__content {
   line-height: 40px;
+}
+@media (width <= 47.99875rem) {
+  .code__content {
+    line-height: 10px;
+  }
 }
 .code__launch {
   background-color: black;
@@ -306,6 +337,23 @@ main {
   color: white;
   border-radius: 3px;
   padding: 10px;
+  margin-top: 10px;
+}
+@media (width <= 47.99875rem) {
+  .code__launch {
+    font-size: 0.5rem;
+    padding: 5px;
+  }
+}
+.code__result {
+  border-top: 2px solid black;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  color: rgb(0, 154, 0);
+  font-size: 0.55rem;
+}
+.code__result.is-hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
